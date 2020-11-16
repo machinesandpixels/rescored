@@ -1,8 +1,11 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
 
-function App() {
-  return <Button color="primary">Rescore</Button>;
+const App = () => {
+  return(
+    <div>
+      <h1>Rescored</h1>
+    </div>
+  ) 
 }
 
 export default App;
