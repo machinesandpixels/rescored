@@ -3,7 +3,7 @@ import React from 'react';
 const App = () => {
   return(
     <div>
-      <h1>RESCORED</h1>
+      <h1 className="text-success">RESCORED</h1>
     </div>
   ) 
 }

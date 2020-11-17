@@ -1,3 +1,5 @@
 body {
-    font-family: 'Poppins', sans-serif
+    font-family: 'Poppins', sans-serif;
+    background: url("/images/home.jpg") no-repeat fixed center;
+    /* opacity: .4;  */
 };
