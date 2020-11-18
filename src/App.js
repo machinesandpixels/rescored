@@ -1,9 +1,12 @@
 import React from 'react';
+import Navbar from './layout/Header';
+import HomePage from './pages/HomePage';
 
 const App = () => {
   return(
     <div>
-      <h1 className="text-success">RESCORED</h1>
+      <Navbar />
+      <HomePage />
     </div>
   ) 
 }
