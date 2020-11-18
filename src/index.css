@@ -3,3 +3,8 @@ body {
     background: url("/images/home.jpg") no-repeat fixed center;
     /* opacity: .4;  */
 };
+
+.center{
+    display: flex;
+   justify-content: center;
+}

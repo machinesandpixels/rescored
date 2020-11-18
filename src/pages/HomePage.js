@@ -11,7 +11,7 @@ const HomePage = () => {
             <Container>
                 <Row>
                     <Col xs={6} md={6} lg={6}>
-                    <Jumbotron>
+                    <Jumbotron className="text-center">
                         <Container>
                         <h1 className="text-wrap text-truncate">
                             Fluid jumbotron
@@ -20,6 +20,7 @@ const HomePage = () => {
                             This is a modified jumbotron that occupies the entire horizontal space of
                             its parent.
                         </p>
+                        
                         </Container>
                     </Jumbotron>
                     </Col>
