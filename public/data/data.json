@@ -1,0 +1,15 @@
+[
+    {
+        "id": 0,
+        "name": "Indigo Platinum",
+        "link": "",
+        "apr": "",
+        "annualFee": [],
+        "fairCredit": true,
+        "badCredit": true,
+        "limitedCredit": false,
+        "securedCard": false,
+        "providoer": "Mastercard",
+        "image": ""
+    }
+]
