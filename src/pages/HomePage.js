@@ -17,7 +17,7 @@ const HomePage = () => {
                         its parent.
                     </p>
                     <CategoriesPanel />
-                    </Container>
+                </Container>
             </Jumbotron>    
         </div>
     )
