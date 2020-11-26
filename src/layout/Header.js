@@ -7,12 +7,14 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const Header = () => {
     
     return (
-            <Navbar className="py-5">
+            <Navbar className="py-5" expand="lg">
                 <Navbar.Brand href="#home">
                     <h2 className="ml-5 text-success">
                         RESCORED
                     </h2>
                 </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                 <NavDropdown
                     title={
@@ -43,6 +45,7 @@ const Header = () => {
                 </NavDropdown>
                 </Nav>
                 <Nav className="ml-5" />
+            </Navbar.Collapse>
             </Navbar>
     )
 }
