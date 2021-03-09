@@ -26,24 +26,31 @@ const Header = () => {
                     <NavDropdown.Item className="text-success" href="#action/3.1">
                         Action
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
+                    <NavDropdown.Item className="text-success" href="#action/3.2">
                         Another action
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Item className="text-success" href="#action/3.3">
+                        Something
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                    <NavDropdown.Item className="text-success" href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown>
 
                 <NavDropdown title={
-                        <span className="text-success my-auto">Secured Cards</span>
-                    }  id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <span className="text-success my-auto">
+                        Secured Cards
+                    </span>
+                    }  
+                    id="collasible-nav-dropdown"
+                >
+                    <NavDropdown.Item className="text-success" href="#action/3.1">Action</NavDropdown.Item>
+                    <NavDropdown.Item className="text-success" href="#action/3.2">Another action</NavDropdown.Item>
+                    <NavDropdown.Item className="text-success" href="#action/3.3">Something</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                    <NavDropdown.Item className="text-success" href="#action/3.4">Separated link</NavDropdown.Item>
                 </NavDropdown>
                 </Nav>
+                
                 <Nav className="ml-5" />
             </Navbar.Collapse>
             </Navbar>
