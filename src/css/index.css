@@ -14,4 +14,14 @@ body {
   filter: drop-shadow(0 0 0.45rem rgb(11, 58, 5));
 }
 
+/* Footer  */
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 
