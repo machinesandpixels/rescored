@@ -12,12 +12,16 @@ const CategoriesPanel = () => {
                 </Button>
             </Link>
             
-            <Button variant="outline-danger" className="mr-3">
-                Bad Credit: 620 - 350
-            </Button> 
-            <Button variant="outline-info">
-                Limited Credit
-            </Button>
+            <Link to="/cards">
+                <Button variant="outline-danger" className="mr-3">
+                    Bad Credit: 620 - 350
+                </Button>
+            </Link>
+            <Link to="/cards">
+                <Button variant="outline-info">
+                    Limited Credit
+                </Button>
+            </Link> 
         </div>
     )
 }
