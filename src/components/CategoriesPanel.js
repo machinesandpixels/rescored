@@ -18,7 +18,7 @@ const CategoriesPanel = () => {
                 </Button>
             </Link>
             <Link to="/cards">
-                <Button variant="outline-info">
+                <Button className="lt--credit" variant="outline-info">
                     Limited Credit
                 </Button>
             </Link> 
