@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import CategoriesPanel from '../components/CategoriesPanel';
 
 const HomePage = () => {
+
     return (
         <main>  
             <Container className="text-center col-6 m-auto">
