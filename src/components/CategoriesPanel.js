@@ -6,7 +6,7 @@ const CategoriesPanel = () => {
 
     const [cards, setCards] = useState([]);
 
-    const getCards = () =>{
+    const getCards = () => {
         fetch('data/creditCards.json'
         ,{
           headers : { 
@@ -15,13 +15,19 @@ const CategoriesPanel = () => {
            }
         }
         )
-          .then(function(response){
+          .then(response => {
+              if(!response.ok){
+                  throw new Error(`Status Code Error: ${response.status}`)
+              }
             console.log(response)
             return response.json();
           })
-          .then(function(myJson) {
+          .then(myJson => {
             console.log(myJson);
             setCards(myJson)
+          })
+          .catch(err => {
+              console.log(`Error Message: ${err}`)
           });
       }
       useEffect(()=>{
