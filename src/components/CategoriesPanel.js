@@ -53,8 +53,10 @@ const CategoriesPanel = () => {
                     Limited Credit
                 </Button>
             </Link> 
+          
             {cards.map(card => (
                   console.log(card.id)
+                //   col=key={card.id}
                 ))}
         </div>
     )
