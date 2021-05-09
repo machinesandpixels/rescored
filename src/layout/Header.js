@@ -4,11 +4,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-
-const Header = () => {
+const Header = ({ cards }) => {
     
     return (
             <Navbar className="py-5" expand="lg">
+                {cards.map(card => (
+                  console.log(card.image)
+                //   col=key={card.id}
+                ))}
                 <LinkContainer to="/">
                 <Navbar.Brand>
                     <h2 className="ml-5 text-success">
