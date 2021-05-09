@@ -16,6 +16,7 @@ const App = () => {
           <Header />
           <Route path="/" component={ HomePage } exact />
           <Route path="/cards" component={ Cards } />
+          {/* <Route path="/cards/:id" component={ Cards } /> */}
         {/* </Switch> */}
       </Router>
     </div>

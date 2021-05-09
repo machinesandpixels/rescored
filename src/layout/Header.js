@@ -1,4 +1,5 @@
 import React from 'react';
+import { LinkContainer } from 'react-router-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -8,11 +9,13 @@ const Header = () => {
     
     return (
             <Navbar className="py-5" expand="lg">
-                <Navbar.Brand href="#home">
+                <LinkContainer to="/">
+                <Navbar.Brand>
                     <h2 className="ml-5 text-success">
                         RESCORED
                     </h2>
                 </Navbar.Brand>
+                </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
@@ -23,17 +26,27 @@ const Header = () => {
                     id="collasible-nav-dropdown" 
                     className="mr-3 text-success"
                 >
-                    <NavDropdown.Item className="text-success dropdown--link" href="#action/3.1">
-                        Action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item className="text-success dropdown--link" href="#action/3.2">
+                    <LinkContainer to="/cards">
+                        <NavDropdown.Item className="text-success dropdown--link">
+                            Action
+                        </NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to="/cards">
+                    <NavDropdown.Item className="text-success dropdown--link">
                         Another action
                     </NavDropdown.Item>
-                    <NavDropdown.Item className="text-success dropdown--link" href="#action/3.3">
+                    </LinkContainer>
+                    <LinkContainer to="/cards">
+                    <NavDropdown.Item className="text-success dropdown--link">
                         Something
                     </NavDropdown.Item>
+                    </LinkContainer>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item className="text-success dropdown--link" href="#action/3.4">Separated link</NavDropdown.Item>
+                    <LinkContainer to="/cards">
+                    <NavDropdown.Item className="text-success dropdown--link">
+                        Separated link
+                    </NavDropdown.Item>
+                    </LinkContainer>
                 </NavDropdown>
 
                 <NavDropdown title={
@@ -43,11 +56,27 @@ const Header = () => {
                     }  
                     id="collasible-nav-dropdown"
                 >
-                    <NavDropdown.Item className="text-success dropdown--link" href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item className="text-success dropdown--link" href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item className="text-success dropdown--link" href="#action/3.3">Something</NavDropdown.Item>
+                    <LinkContainer to="/cards">
+                    <NavDropdown.Item className="text-success dropdown--link">
+                        Action
+                    </NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to="/cards">
+                    <NavDropdown.Item className="text-success dropdown--link">
+                        Another action
+                    </NavDropdown.Item>
+                    </LinkContainer>
+                    <LinkContainer to="/cards">
+                    <NavDropdown.Item className="text-success dropdown--link">
+                        Something
+                    </NavDropdown.Item>
+                    </LinkContainer>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item className="text-success dropdown--link" href="#action/3.4">Separated link</NavDropdown.Item>
+                    <LinkContainer to="/cards">
+                    <NavDropdown.Item className="text-success dropdown--link">
+                        Separated link
+                    </NavDropdown.Item>
+                    </LinkContainer>
                 </NavDropdown>
                 </Nav>
                 
