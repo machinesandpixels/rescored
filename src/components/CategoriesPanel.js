@@ -55,7 +55,7 @@ const CategoriesPanel = () => {
             </Link> 
           
             {cards.map(card => (
-                  console.log(card.id)
+                  console.log(card.image)
                 //   col=key={card.id}
                 ))}
         </div>

@@ -2,7 +2,7 @@
     {
         "id": 0,
         "name": "Indigo Platinum Mastercard",
-        "link": "",
+        "link": "www.indigocard.com/pre-qualify",
         "apr": 24.90,
         "annualFee": [75.00,99.00],
         "fairCredit": true,
@@ -11,12 +11,12 @@
         "securedCard": false,
         "deposit": 0.00,
         "provider": "Mastercard",
-        "image": ""
+        "image": "images/creditCards/indigo_card.png"
     },
     {
         "id": 1,
         "name": "First Progress Platinum Select MasterCard Secured Credit Card",
-        "link": "",
+        "link": "start.progresscredit.com/apply",
         "apr": 13.99,
         "annualFee": [39.00],
         "fairCredit": true,
@@ -25,12 +25,12 @@
         "securedCard": true,
         "deposit": 200.00,
         "provider": "Mastercard",
-        "image": ""
+        "image": "images/creditCards/first_progress_secured.png"
     },
     {
         "id": 2,
         "name": "Finger Hunt",
-        "link": "",
+        "link": "www.fingerhut.com/creditApp/index",
         "apr": 29.99,
         "annualFee": [0.00],
         "fairCredit": false,
@@ -39,12 +39,12 @@
         "securedCard": false,
         "deposit": 0.00,
         "provider": "WebBank",
-        "image": ""
+        "image": "images/creditCards/finger_hut.png"
     },
     {
         "id": 3,
         "name": "Milestone Gold Mastercard",
-        "link": "",
+        "link": "www.milestonegoldcard.com/pre-qualify",
         "apr": 24.90,
         "annualFee": [75.00,99.00],
         "fairCredit": true,
@@ -53,12 +53,12 @@
         "securedCard": false,
         "deposit": 0.00,
         "provider": "Mastercard",
-        "image": ""
+        "image": "images/creditCards/milestone_gold.png"
     },
     {
         "id": 4,
         "name": "OpenSky Secured Credit Visa Card",
-        "link": "",
+        "link": "openskycc.com/app/application",
         "apr": 17.39,
         "annualFee": [35.00],
         "fairCredit": false,
@@ -67,12 +67,12 @@
         "securedCard": true,
         "minDeposit": 200.00,
         "provider": "Visa",
-        "image": ""
+        "image": "images/creditCards/OpenSky_secured.png"
     },
     {
         "id": 5,
         "name": "Petal 1 Visa Card",
-        "link": "",
+        "link": "registration.petalcard.com/phone",
         "apr": [19.99, 29.49],
         "annualFee": [0.00],
         "fairCredit": false,
@@ -80,6 +80,6 @@
         "limitedCredit": false,
         "securedCard": false,
         "provider": "Visa",
-        "image": ""
+        "image": "images/creditCards/petal1_card.png"
     }
 ]
