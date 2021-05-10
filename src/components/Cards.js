@@ -4,10 +4,14 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Footer from '../layout/Footer';
 
 const Cards = (props) => {
+
+    const data = props.location.data;
+
     return (
         <div>
             <Link to="/">
@@ -16,24 +20,28 @@ const Cards = (props) => {
                 </Button>
             </Link>
             <Container>
-                { 
+                {/* { 
                     console.log(props.location.data)
-                }
+                } */}
             <Row className="d-flex justify-content-center">
                 <Col sm={12} md={6} lg={4} xl={3}>
-                <Card className="my-3 p-3 rounded" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the cardtitle and make  up the bulk of
-                    the card's content.
-                </Card.Text>
-                <Button variant="outline-success">
-                    Go somewhere
-                </Button>
-                </Card.Body>
-                </Card>
+                { data ? data.map(card => (
+                     <Card key={card.id} className="my-3 p-3 rounded" style={{ width: '20rem' }}>
+                     <Card.Img variant="top" src={card.image} />
+                     <Card.Body>
+                     <Card.Title>{ card.name }</Card.Title>
+                     {/* <Card.Subtitle>Apr:{card.apr}</Card.Subtitle> */}
+                     {/* <ListGroup variant="flush">
+                        <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                    </ListGroup> */}
+                     <Button href={card.link} className="d-flex justify-content-center" variant="outline-success">
+                         Apply
+                     </Button>
+                     </Card.Body>
+                     </Card>
+                )) : '' }
                 </Col>
             </Row>
             </Container>
