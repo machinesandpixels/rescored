@@ -8,10 +8,6 @@ const Header = ({ cards }) => {
     
     return (
             <Navbar className="py-5" expand="lg">
-                {cards.map(card => (
-                  console.log(card.image)
-                //   col=key={card.id}
-                ))}
                 <LinkContainer to="/">
                 <Navbar.Brand>
                     <h2 className="ml-5 text-success">
@@ -29,27 +25,14 @@ const Header = ({ cards }) => {
                     id="collasible-nav-dropdown" 
                     className="mr-3 text-success"
                 >
-                    <LinkContainer to="/cards">
-                        <NavDropdown.Item className="text-success dropdown--link">
-                            Action
+                 {   cards.map(card => (
+                     <LinkContainer key={card.id} to="/cards">
+                        <NavDropdown.Item  className="text-success dropdown--link">
+                            {  card.securedCard ? '' : card.name }
                         </NavDropdown.Item>
-                    </LinkContainer>
-                    <LinkContainer to="/cards">
-                    <NavDropdown.Item className="text-success dropdown--link">
-                        Another action
-                    </NavDropdown.Item>
-                    </LinkContainer>
-                    <LinkContainer to="/cards">
-                    <NavDropdown.Item className="text-success dropdown--link">
-                        Something
-                    </NavDropdown.Item>
-                    </LinkContainer>
-                    <NavDropdown.Divider />
-                    <LinkContainer to="/cards">
-                    <NavDropdown.Item className="text-success dropdown--link">
-                        Separated link
-                    </NavDropdown.Item>
-                    </LinkContainer>
+                     </LinkContainer>
+                    ))
+                }
                 </NavDropdown>
 
                 <NavDropdown title={
@@ -59,30 +42,16 @@ const Header = ({ cards }) => {
                     }  
                     id="collasible-nav-dropdown"
                 >
-                    <LinkContainer to="/cards">
-                    <NavDropdown.Item className="text-success dropdown--link">
-                        Action
-                    </NavDropdown.Item>
-                    </LinkContainer>
-                    <LinkContainer to="/cards">
-                    <NavDropdown.Item className="text-success dropdown--link">
-                        Another action
-                    </NavDropdown.Item>
-                    </LinkContainer>
-                    <LinkContainer to="/cards">
-                    <NavDropdown.Item className="text-success dropdown--link">
-                        Something
-                    </NavDropdown.Item>
-                    </LinkContainer>
-                    <NavDropdown.Divider />
-                    <LinkContainer to="/cards">
-                    <NavDropdown.Item className="text-success dropdown--link">
-                        Separated link
-                    </NavDropdown.Item>
-                    </LinkContainer>
+                    {   cards.map(card => (
+                     <LinkContainer key={card.id} to="/cards">
+                        <NavDropdown.Item  className="text-success dropdown--link">
+                            {  card.securedCard ? card.name : '' }
+                        </NavDropdown.Item>
+                     </LinkContainer>
+                    ))
+                }
                 </NavDropdown>
                 </Nav>
-                
                 <Nav className="ml-5" />
             </Navbar.Collapse>
             </Navbar>
