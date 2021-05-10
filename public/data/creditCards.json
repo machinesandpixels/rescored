@@ -2,7 +2,7 @@
     {
         "id": 0,
         "name": "Indigo Platinum Mastercard",
-        "link": "www.indigocard.com/pre-qualify",
+        "link": "https://www.indigocard.com/pre-qualify",
         "apr": 24.90,
         "annualFee": [75.00,99.00],
         "fairCredit": true,
@@ -16,7 +16,7 @@
     {
         "id": 1,
         "name": "First Progress Platinum Select MasterCard Secured Credit Card",
-        "link": "start.progresscredit.com/apply",
+        "link": "https://start.progresscredit.com/apply",
         "apr": 13.99,
         "annualFee": [39.00],
         "fairCredit": true,
@@ -30,7 +30,7 @@
     {
         "id": 2,
         "name": "Finger Hunt",
-        "link": "www.fingerhut.com/creditApp/index",
+        "link": "https://www.fingerhut.com/creditApp/index",
         "apr": 29.99,
         "annualFee": [0.00],
         "fairCredit": false,
@@ -44,7 +44,7 @@
     {
         "id": 3,
         "name": "Milestone Gold Mastercard",
-        "link": "www.milestonegoldcard.com/pre-qualify",
+        "link": "https://www.milestonegoldcard.com/pre-qualify",
         "apr": 24.90,
         "annualFee": [75.00,99.00],
         "fairCredit": true,
@@ -58,7 +58,7 @@
     {
         "id": 4,
         "name": "OpenSky Secured Credit Visa Card",
-        "link": "openskycc.com/app/application",
+        "link": "https://openskycc.com/app/application",
         "apr": 17.39,
         "annualFee": [35.00],
         "fairCredit": false,
@@ -72,7 +72,7 @@
     {
         "id": 5,
         "name": "Petal 1 Visa Card",
-        "link": "registration.petalcard.com/phone",
+        "link": "https://registration.petalcard.com/phone",
         "apr": [19.99, 29.49],
         "annualFee": [0.00],
         "fairCredit": false,
