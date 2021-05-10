@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Footer from '../layout/Footer';
 
-const Cards = () => {
+const Cards = (props) => {
     return (
         <div>
             <Link to="/">
@@ -16,6 +16,9 @@ const Cards = () => {
                 </Button>
             </Link>
             <Container>
+                { 
+                    console.log(props.location.data)
+                }
             <Row className="d-flex justify-content-center">
                 <Col sm={12} md={6} lg={4} xl={3}>
                 <Card className="my-3 p-3 rounded" style={{ width: '18rem' }}>
