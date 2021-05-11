@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import Header from '../layout/Header';
 import HomePage from '../pages/HomePage';
-import Cards from '../components/Cards';
+import CardsPage from '../pages/CardsPage';
 
 const App = () => {
 
@@ -51,7 +51,7 @@ const App = () => {
               <HomePage cards={ cards } />
             )}
           />
-          <Route path="/cards" component={ Cards } />
+          <Route path="/cards" component={ CardsPage } />
           {/* <Route path="/cards/:id" component={ Cards } /> */}
       </Router>
     </div>
