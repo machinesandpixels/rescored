@@ -31,7 +31,7 @@ const Cards = (props) => {
     return (
         <div>
             <Link to="/">
-                <Button variant="outline-success ml-5">
+                <Button className="btn--margin" variant="outline-success">
                     Back 
                 </Button>
             </Link>

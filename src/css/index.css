@@ -25,6 +25,10 @@ body {
   color: aqua;
 }
 
+.btn--margin{
+  margin-left: 4.1rem;
+}
+
 /* Footer  */
 .footer {
   display: flex;
