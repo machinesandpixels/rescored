@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -11,6 +11,22 @@ import Footer from '../layout/Footer';
 const Cards = (props) => {
 
     const data = props.location.data;
+    const [value, setValue] = useState('100');
+
+    // localStorage.setItem('myV', 'test');
+    // const result = localStorage.getItem('myV');
+    // console.log('.......');
+    // console.log(result);
+
+    // localStorage.setItem('myV', JSON.stringify(data));
+    // const result = localStorage.getItem('myV');
+    // console.log('.......');
+    // console.log(JSON.parse(result));
+//   const onChange = event => {
+//     localStorage.setItem('myValueInLocalStorage', event.target.value);
+ 
+//     setValue(event.target.value);
+//   };
 
     return (
         <div>
