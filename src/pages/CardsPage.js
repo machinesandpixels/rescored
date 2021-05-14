@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
@@ -11,7 +11,8 @@ import Footer from '../layout/Footer';
 const Cards = (props) => {
 
     const data = props.location.data;
-    const [value, setValue] = useState('100');
+    // const [value, setValue] = useState('100');
+    // const [value, setValue] = useState(data);
 
     // localStorage.setItem('myV', 'test');
     // const result = localStorage.getItem('myV');
@@ -57,7 +58,7 @@ const Cards = (props) => {
                      </Button>
                      </Card.Body>
                      </Card>
-                )) : '' }
+                )) : <Redirect to='/'  /> }
                 </Col>
             </Row>
             </Container>
