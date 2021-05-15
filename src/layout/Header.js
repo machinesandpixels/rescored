@@ -26,7 +26,7 @@ const Header = ({ cards }) => {
                     className="mr-3 text-success"
                 >
                  {   cards.map(card => (
-                     <LinkContainer key={card.id} to="/cards">
+                     <LinkContainer key={card.id} to={`/card/${card.id}`}>
                         <NavDropdown.Item  className="text-success dropdown--link">
                             {  card.securedCard ? '' : card.name }
                         </NavDropdown.Item>

@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import Header from '../layout/Header';
 import HomePage from '../pages/HomePage';
+import CardPage from '../pages/CardPage';
 import CardsPage from '../pages/CardsPage';
 
 const App = () => {
@@ -52,7 +53,7 @@ const App = () => {
             )}
           />
           <Route path="/cards" component={ CardsPage } />
-          {/* <Route path="/cards/:id" component={ Cards } /> */}
+          <Route path="/card/:id" component={ CardPage } />
       </Router>
     </div>
   ) 

@@ -13,7 +13,7 @@ const Cards = (props) => {
     const data = props.location.data;
     // const [value, setValue] = useState('100');
     // const [value, setValue] = useState(data);
-
+    
     // localStorage.setItem('myV', 'test');
     // const result = localStorage.getItem('myV');
     // console.log('.......');
