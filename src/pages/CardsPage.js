@@ -47,13 +47,11 @@ const Cards = (props) => {
                      <Card.Img variant="top" src={card.image} />
                      <Card.Body>
                      <Card.Title>{ card.name }</Card.Title>
-                     {/* <Card.Subtitle>Apr:{card.apr}</Card.Subtitle> */}
-                     {/* <ListGroup variant="flush">
-                        <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                    </ListGroup> */}
-                     <Button href={card.link} className="d-flex justify-content-center" variant="outline-success">
+                     <Card.Header>Annual Fee</Card.Header>
+                     <Card.Header>${ card.annualFee }</Card.Header>
+                     <Card.Header className="mt-3">APR</Card.Header>
+                     <Card.Header>{ card.apr }%</Card.Header>
+                     <Button href={card.link} className="d-flex justify-content-center mt-3" variant="outline-success">
                          Apply
                      </Button>
                      </Card.Body>
