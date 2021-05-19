@@ -1,22 +1,59 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   BrowserRouter as Router, 
-  Route, 
-  Switch 
+  Route
 } from 'react-router-dom';
 import Header from '../layout/Header';
 import HomePage from '../pages/HomePage';
-import Cards from '../components/Cards';
+import CardPage from '../pages/CardPage';
+import CardsPage from '../pages/CardsPage';
 
 const App = () => {
+
+  const [cards, setCards] = useState([]);
+
+    const getCards = () => {
+        fetch('data/creditCards.json'
+        ,{
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+        }
+        )
+          .then(response => {
+              if(!response.ok){
+                  throw new Error(`Status Code Error: ${response.status}`)
+              }
+            console.log(response)
+            return response.json();
+          })
+          .then(myJson => {
+            // console.log(myJson);
+            setCards(myJson)
+          })
+          .catch(err => {
+              console.log(`Error Message: ${err}`)
+          });
+      }
+
+      useEffect( () => {
+        getCards()
+      },[])
+
   return(
     <div>
       <Router>
-        {/* <Switch> */}
-          <Header />
-          <Route path="/" component={ HomePage } exact />
-          <Route path="/cards" component={ Cards } />
-        {/* </Switch> */}
+          <Header cards={ cards } />
+          <Route
+            exact
+            path='/'
+            render={ () => (
+              <HomePage cards={ cards } />
+            )}
+          />
+          <Route path="/cards" component={ CardsPage } />
+          <Route path="/card/:id" component={ CardPage } />
       </Router>
     </div>
   ) 
