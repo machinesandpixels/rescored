@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = ({ cards }) => {
-    
+      
     return (
             <Navbar className="py-5" expand="lg">
                 <LinkContainer to="/">
@@ -20,19 +20,21 @@ const Header = ({ cards }) => {
                 <Nav className="ml-auto">
                 <NavDropdown
                     title={
-                        <span className="text-success my-auto">Credit Cards</span>
+                        <span className="text-success my-auto">
+                            Credit Cards
+                        </span>
                     } 
                     id="collasible-nav-dropdown" 
                     className="mr-3 text-success"
                 >
-                 {   cards.map(card => (
-                     <LinkContainer key={card.id} to={`/card/${card.id}`}>
-                        <NavDropdown.Item  className="text-success dropdown--link">
-                            {  card.securedCard ? '' : card.name }
-                        </NavDropdown.Item>
-                     </LinkContainer>
+                 {  cards.filter(card => !card.securedCard).map(card => (
+                      <LinkContainer key={card.id} to={`/card/${card.id}`}>
+                      <NavDropdown.Item  className="text-success dropdown--link">
+                          { card.name }
+                      </NavDropdown.Item>
+                   </LinkContainer>
                     ))
-                }
+                 }
                 </NavDropdown>
 
                 <NavDropdown title={
@@ -42,14 +44,14 @@ const Header = ({ cards }) => {
                     }  
                     id="collasible-nav-dropdown"
                 >
-                    {   cards.map(card => (
-                     <LinkContainer key={card.id} to="/cards">
-                        <NavDropdown.Item  className="text-success dropdown--link">
-                            {  card.securedCard ? card.name : '' }
-                        </NavDropdown.Item>
-                     </LinkContainer>
+                {  cards.filter(card => card.securedCard).map(card => (
+                      <LinkContainer key={card.id} to={`/card/${card.id}`}>
+                      <NavDropdown.Item  className="text-success dropdown--link">
+                          { card.name }
+                      </NavDropdown.Item>
+                   </LinkContainer>
                     ))
-                }
+                 }
                 </NavDropdown>
                 </Nav>
                 <Nav className="ml-5" />
