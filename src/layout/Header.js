@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = ({ cards }) => {
-      
+
     return (
             <Navbar className="py-5" expand="lg">
                 <LinkContainer to="/">
@@ -28,7 +28,10 @@ const Header = ({ cards }) => {
                     className="mr-3 text-success"
                 >
                  {  cards.filter(card => !card.securedCard).map(card => (
-                      <LinkContainer key={card.id} to={`/card/${card.id}`}>
+                      <LinkContainer key={card.id} to={{
+                        pathname: `/card/${card.id}`,
+                        data: card
+                    }}>
                       <NavDropdown.Item  className="text-success dropdown--link">
                           { card.name }
                       </NavDropdown.Item>
@@ -45,7 +48,10 @@ const Header = ({ cards }) => {
                     id="collasible-nav-dropdown"
                 >
                 {  cards.filter(card => card.securedCard).map(card => (
-                      <LinkContainer key={card.id} to={`/card/${card.id}`}>
+                      <LinkContainer key={card.id} to={{
+                        pathname: `/card/${card.id}`,
+                        data: card
+                    }}>
                       <NavDropdown.Item  className="text-success dropdown--link">
                           { card.name }
                       </NavDropdown.Item>
