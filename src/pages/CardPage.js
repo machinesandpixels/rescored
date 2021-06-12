@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
+import BackButton from '../components/BackButton';
 import Footer from '../layout/Footer';
 
 const CardPage = (props) => {
@@ -15,6 +16,8 @@ const CardPage = (props) => {
     return (
         <div>
             { card ? 
+            <div>
+            <BackButton />
             <Container fluid>
             <Row>
                 <Col className="d-flex justify-content-center">
@@ -33,7 +36,8 @@ const CardPage = (props) => {
                     </Card>
                 </Col>
             </Row>
-            </Container> : <Redirect to='/'  /> 
+            </Container> 
+            </div> : <Redirect to='/'  /> 
             }
         </div>
     )
