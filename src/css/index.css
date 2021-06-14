@@ -46,3 +46,31 @@ body {
   }
 }
 
+@media (max-width: 667px){
+
+  h1{
+      font-size: 1rem;
+  }
+  .navbar-brand{
+    margin: 0 2rem;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+
+  p {
+    font-size: .6rem;
+  }
+
+  .btn-outline-warning{
+    margin-bottom: 1rem;
+  }
+
+  .lt--credit{
+    max-width: 95%;
+  }
+  /* #collasible-nav-dropdown{
+    margin-left: 3rem;
+  } */
+}
+
