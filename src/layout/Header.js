@@ -54,7 +54,9 @@ const Header = ({ cards }) => {
                     }}>
                       <NavDropdown.Item  className="text-success dropdown--link">
                           { 
-                            card.name.includes("Merrick") ?
+                            card.name.includes("Merrick") || 
+                            card.name.includes("Chime") ||
+                            card.name.includes("Self") ?
                                 card.name.slice(0, 20)
                             : 
                                 card.name.slice(0, 15)  
