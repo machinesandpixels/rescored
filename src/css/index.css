@@ -14,17 +14,6 @@ body {
   opacity: 0.6;
 }
 
-.dropdown--position{
-  margin-right: 15rem;
-  background-color: aqua;
-  max-width: 10px;
-}
-
-.active:hover {
-  background-color: aquamarine;
-  color: aqua;
-}
-
 .btn--margin{
   margin-left: 4.1rem;
 }
@@ -52,13 +41,8 @@ body {
   h1{
       font-size: 1.5rem;
   }
-
-  /* .navbar-light .navbar-toggler-icon{
-    background-color:rgb(76, 179, 76);
+  #collasible-nav-dropdown{
+    margin-left: 3rem;
   }
-  button > .navbar-toggler collapsed{
-    color:rgb(76, 179, 76);
-  } */
-
 }
 
