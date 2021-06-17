@@ -29,7 +29,8 @@ const CardPage = (props) => {
                             <Card.Header>${ card.annualFee }</Card.Header>
                             <Card.Header className="mt-3">APR</Card.Header>
                             <Card.Header>{ card.apr }%</Card.Header>
-                            <Button href={card.link} className="d-flex      justify-content-center mt-3" variant="outline-success">
+                            <Button href={card.link}
+                            target="_blank" rel="noopener noreferrer" className="d-flex      justify-content-center mt-3" variant="outline-success">
                                 Apply
                             </Button>
                         </Card.Body>
