@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
+import BackButton from '../components/BackButton';
 import Footer from '../layout/Footer';
 
 const Cards = (props) => {
@@ -31,15 +32,8 @@ const Cards = (props) => {
 
     return (
         <div>
-            <Link to="/">
-                <Button className="btn--margin" variant="outline-success">
-                    Back 
-                </Button>
-            </Link>
+            <BackButton />
             <Container>
-                {/* { 
-                    console.log(props.location.data)
-                } */}
             <Row className="d-flex justify-content-center">
                 <Col sm={12} md={6} lg={4} xl={3}>
                 { data ? data.map(card => (
@@ -51,7 +45,7 @@ const Cards = (props) => {
                      <Card.Header>${ card.annualFee }</Card.Header>
                      <Card.Header className="mt-3">APR</Card.Header>
                      <Card.Header>{ card.apr }%</Card.Header>
-                     <Button href={card.link} className="d-flex justify-content-center mt-3" variant="outline-success">
+                     <Button href={card.link} target="_blank" rel="noopener noreferrer" className="d-flex justify-content-center mt-3" variant="outline-success">
                          Apply
                      </Button>
                      </Card.Body>
@@ -60,11 +54,6 @@ const Cards = (props) => {
                 </Col>
             </Row>
             </Container>
-            {/* <Row>
-                <Col sm={12} md={6} lg={4} xl={3}>
-                </Col>
-            </Row> */}
-            {/* <Footer /> */}
         </div>
     )
 }

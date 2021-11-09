@@ -5,9 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = ({ cards }) => {
-      
+
     return (
-            <Navbar className="py-5" expand="lg">
+            <Navbar className="hh py-5" expand="lg">
                 <LinkContainer to="/">
                 <Navbar.Brand>
                     <h2 className="ml-5 text-success">
@@ -28,8 +28,11 @@ const Header = ({ cards }) => {
                     className="mr-3 text-success"
                 >
                  {  cards.filter(card => !card.securedCard).map(card => (
-                      <LinkContainer key={card.id} to={`/card/${card.id}`}>
-                      <NavDropdown.Item  className="text-success dropdown--link">
+                      <LinkContainer key={card.id} to={{
+                        pathname: `/card/${card.id}`,
+                        data: card
+                    }}>
+                      <NavDropdown.Item id="dropdown--container"  className="text-success dropdown--link">
                           { card.name }
                       </NavDropdown.Item>
                    </LinkContainer>
@@ -45,9 +48,19 @@ const Header = ({ cards }) => {
                     id="collasible-nav-dropdown"
                 >
                 {  cards.filter(card => card.securedCard).map(card => (
-                      <LinkContainer key={card.id} to={`/card/${card.id}`}>
-                      <NavDropdown.Item  className="text-success dropdown--link">
-                          { card.name }
+                      <LinkContainer key={card.id} to={{
+                        pathname: `/card/${card.id}`,
+                        data: card
+                    }}>
+                      <NavDropdown.Item id="dropdown--container"  className="text-success dropdown--link">
+                          { 
+                            card.name.includes("Merrick") || 
+                            card.name.includes("Chime") ||
+                            card.name.includes("Self") ?
+                                card.name.slice(0, 20)
+                            : 
+                                card.name.slice(0, 15)  
+                        }
                       </NavDropdown.Item>
                    </LinkContainer>
                     ))

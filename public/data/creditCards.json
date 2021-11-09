@@ -15,7 +15,7 @@
     },
     {
         "id": 1,
-        "name": "First Progress Platinum Select MasterCard Secured Credit Card",
+        "name": "First Progress Platinum Secured Card",
         "link": "https://start.progresscredit.com/apply",
         "apr": 13.99,
         "annualFee": [39.00],
@@ -65,7 +65,7 @@
         "badCredit": true,
         "limitedCredit": true,
         "securedCard": true,
-        "minDeposit": 200.00,
+        "deposit": 200.00,
         "provider": "Visa",
         "image": "images/creditCards/OpenSky_secured.png"
     },
@@ -79,6 +79,7 @@
         "badCredit": true,
         "limitedCredit": true,
         "securedCard": false,
+        "deposit": 0.00,
         "provider": "Visa",
         "image": "images/creditCards/petal1_card.png"
     },
@@ -92,6 +93,7 @@
         "badCredit": true,
         "limitedCredit": false,
         "securedCard": false,
+        "deposit": 0.00,
         "provider": "Mastercard",
         "image": "images/creditCards/Destiny_Mastercard.png"
     },
@@ -105,7 +107,64 @@
         "badCredit": true,
         "limitedCredit": true,
         "securedCard": true,
+        "deposit": 200.00,
         "provider": "Visa",
         "image": "images/creditCards/merrick_bank_secured.png"
+    },
+    {
+        "id": 8,
+        "name": "Discover it Student",
+        "link": "https://www.discovercard.com/application/website/apply?srcCde=RJQX&ICMPGN=ALL_CC_STUDENT_CB_APPLY_NOW_BTN",
+        "apr": "12.99 - 21.99",
+        "annualFee": 0.00,
+        "fairCredit": true,
+        "badCredit": false,
+        "limitedCredit": true,
+        "securedCard": false,
+        "deposit": 0.00,
+        "provider": "Discover",
+        "image": "images/creditCards/Discover_it_student_cashback.png"
+    },
+    {
+        "id": 9,
+        "name": "AvantCard",
+        "link": "https://www.avant.com/credit-card/",
+        "apr": 25.99,
+        "annualFee": 39.00,
+        "fairCredit": true,
+        "badCredit": false,
+        "limitedCredit": false,
+        "securedCard": false,
+        "deposit": 0.00,
+        "provider": "Mastercard",
+        "image": "images/creditCards/AvantCard.png"
+    },
+    {
+        "id": 10,
+        "name": "Chime Credit Builder",
+        "link": "https://www.chime.com/credit-builder/",
+        "apr": "",
+        "annualFee": 0.00,
+        "fairCredit": false,
+        "badCredit": true,
+        "limitedCredit": true,
+        "securedCard": true,
+        "deposit": 0.00,
+        "provider": "Visa",
+        "image": "images/creditCards/ChimeCredit.png"
+    },
+    {
+        "id": 11,
+        "name": "Self Secured Visa",
+        "link": "https://www.self.inc/visa-secured-credit-card",
+        "apr": 23.74,
+        "annualFee": 25.00,
+        "fairCredit": false,
+        "badCredit": true,
+        "limitedCredit": true,
+        "securedCard": true,
+        "deposit": 100.00,
+        "provider": "Visa",
+        "image": "images/creditCards/self_secured.jpeg"
     }
 ]

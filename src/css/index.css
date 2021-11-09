@@ -8,21 +8,15 @@ body {
   justify-content: center;
 }
 
-/* .border-green{
-  border: solid 4px rgb(76, 179, 76);
-  border-radius: 12px;
-  filter: drop-shadow(0 0 0.45rem rgb(11, 58, 5));
-} */
-
 .dropdown--link:hover {
   background-color: rgb(240, 240, 240);
   filter: drop-shadow(0 0 0.25rem rgb(11, 58, 5));
   opacity: 0.6;
 }
 
-.active:hover {
-  background-color: aquamarine;
-  color: aqua;
+/* Work around to remove active color after clicking on dropdown links */
+#dropdown--container {
+  background: white;
 }
 
 .btn--margin{
@@ -52,13 +46,42 @@ body {
   h1{
       font-size: 1.5rem;
   }
-
-  /* .navbar-light .navbar-toggler-icon{
-    background-color:rgb(76, 179, 76);
+  #collasible-nav-dropdown{
+    margin-left: 3rem;
   }
-  button > .navbar-toggler collapsed{
-    color:rgb(76, 179, 76);
-  } */
+}
 
+@media (max-width: 667px){
+
+  h1{
+      font-size: 1rem;
+  }
+  .hh {
+   display: flex;
+   justify-content: center;
+  }
+
+  .navbar-brand {
+    margin: 0 2rem;
+  }
+  
+  .navbar-toggler {
+    display: none;
+  }
+
+  p {
+    font-size: .6rem;
+  }
+
+  .btn-outline-warning{
+    margin-bottom: 1rem;
+  }
+
+  .lt--credit{
+    max-width: 95%;
+  }
+  /* #collasible-nav-dropdown{
+    margin-left: 3rem;
+  } */
 }
 
