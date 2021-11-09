@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const Header = ({ cards }) => {
 
     return (
-            <Navbar className="py-5" expand="lg">
+            <Navbar className="hh py-5" expand="lg">
                 <LinkContainer to="/">
                 <Navbar.Brand>
                     <h2 className="ml-5 text-success">
@@ -32,7 +32,7 @@ const Header = ({ cards }) => {
                         pathname: `/card/${card.id}`,
                         data: card
                     }}>
-                      <NavDropdown.Item  className="text-success dropdown--link">
+                      <NavDropdown.Item id="dropdown--container"  className="text-success dropdown--link">
                           { card.name }
                       </NavDropdown.Item>
                    </LinkContainer>
@@ -52,7 +52,7 @@ const Header = ({ cards }) => {
                         pathname: `/card/${card.id}`,
                         data: card
                     }}>
-                      <NavDropdown.Item  className="text-success dropdown--link">
+                      <NavDropdown.Item id="dropdown--container"  className="text-success dropdown--link">
                           { 
                             card.name.includes("Merrick") || 
                             card.name.includes("Chime") ||

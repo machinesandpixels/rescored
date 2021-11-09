@@ -14,6 +14,11 @@ body {
   opacity: 0.6;
 }
 
+/* Work around to remove active color after clicking on dropdown links */
+#dropdown--container {
+  background: white;
+}
+
 .btn--margin{
   margin-left: 4.1rem;
 }
@@ -51,9 +56,15 @@ body {
   h1{
       font-size: 1rem;
   }
-  .navbar-brand{
+  .hh {
+   display: flex;
+   justify-content: center;
+  }
+
+  .navbar-brand {
     margin: 0 2rem;
   }
+  
   .navbar-toggler {
     display: none;
   }
