@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router, 
   Route
 } from 'react-router-dom';
+import axios from 'axios';
 import Header from '../layout/Header';
 import HomePage from '../pages/HomePage';
 import CardPage from '../pages/CardPage';
@@ -12,34 +13,18 @@ const App = () => {
 
   const [cards, setCards] = useState([]);
 
-    const getCards = () => {
-        fetch('data/creditCards.json'
-        ,{
-          headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-           }
-        }
-        )
-          .then(response => {
-              if(!response.ok){
-                  throw new Error(`Status Code Error: ${response.status}`)
-              }
-            console.log(response)
-            return response.json();
-          })
-          .then(myJson => {
-            // console.log(myJson);
-            setCards(myJson)
-          })
-          .catch(err => {
-              console.log(`Error Message: ${err}`)
-          });
-      }
-
-      useEffect( () => {
-        getCards()
-      },[])
+  const getCards = async () => {
+    try {
+      const { data } = await axios("data/creditCards.json");
+      setCards(data);
+    } catch (err) {
+      throw new Error('Unable to make request')
+    }
+  }
+    
+  useEffect( () => {
+    getCards();
+  },[]);
 
   return(
     <div>
