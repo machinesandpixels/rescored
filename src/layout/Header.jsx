@@ -6,8 +6,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Header = () => {
-    const { cards } = useContext(CreditCardsContext);
 
+    const { nonSecuredCards, securedCards } = useContext(CreditCardsContext);
+   
     return (
             <Navbar className="hh py-5" expand="lg">
                 <LinkContainer to="/">
@@ -29,7 +30,7 @@ const Header = () => {
                     id="collasible-nav-dropdown" 
                     className="mr-3 text-success"
                 >
-                 {  cards.filter(card => !card.securedCard).map(card => (
+                 {  nonSecuredCards.map(card => (
                       <LinkContainer key={card.id} 
                         to={`/card/${card.id}`} 
                         state={{creditCard: card}}
@@ -42,18 +43,18 @@ const Header = () => {
                  }
                 </NavDropdown>
 
-                {/* <NavDropdown title={
+                <NavDropdown title={
                     <span className="text-success my-auto">
                         Secured Cards
                     </span>
                     }  
                     id="collasible-nav-dropdown"
                 >
-                {  cards.filter(card => card.securedCard).map(card => (
-                      <LinkContainer key={card.id} to={{
-                        pathname: `/card/${card.id}`,
-                        data: card
-                    }}>
+                {  securedCards.map(card => (
+                    <LinkContainer key={card.id} 
+                    to={`/card/${card.id}`} 
+                    state={{creditCard: card}}
+                    >
                       <NavDropdown.Item id="dropdown--container"  className="text-success dropdown--link">
                           { 
                             card.name.includes("Merrick") || 
@@ -67,7 +68,7 @@ const Header = () => {
                    </LinkContainer>
                     ))
                  }
-                </NavDropdown> */}
+                </NavDropdown>
                 </Nav>
                 <Nav className="ml-5" />
             </Navbar.Collapse>
