@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CreditCardsContext } from '../context/CreditCardsContext';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
-const CategoriesPanel = ({ cards }) => {
+const CategoriesPanel = () => {
 
+    const { cards } = useContext(CreditCardsContext);
     let fairCredit = [];
-    let badCredit = [];
-    let limitedCredit = [];
+    // let badCredit = [];
+    // let limitedCredit = [];
     
     { 
         cards.map(card => {
@@ -14,28 +16,25 @@ const CategoriesPanel = ({ cards }) => {
             if (card.fairCredit) {
                 fairCredit.push(card);
             }
-            if (card.badCredit) {
-                badCredit.push(card);
-            }
-            if (card.limitedCredit) {
-                limitedCredit.push(card);
-            }
+            // if (card.badCredit) {
+            //     badCredit.push(card);
+            // }
+            // if (card.limitedCredit) {
+            //     limitedCredit.push(card);
+            // }
 
         });
     }
-
+   
     return (
         <div className="my-4">
             
-            <Link to={{
-                pathname: '/cards',
-                data: fairCredit
-            }}>
+            <Link to='/cards' state={{creditCards: fairCredit}}>
                 <Button variant="outline-warning" className="mr-3">
                     Fair Credit: 689 - 630 
                 </Button>
             </Link>
-            <Link to={{
+            {/* <Link to={{
                 pathname: '/cards',
                 data: badCredit
             }}>
@@ -50,7 +49,7 @@ const CategoriesPanel = ({ cards }) => {
                 <Button className="lt--credit" variant="outline-info">
                     Limited Credit
                 </Button>
-            </Link> 
+            </Link>  */}
            
         </div>
     )

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CreditCardsContext } from '../context/CreditCardsContext';
 import { LinkContainer } from 'react-router-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Header = ({ cards }) => {
+const Header = () => {
+    const { cards } = useContext(CreditCardsContext);
 
     return (
             <Navbar className="hh py-5" expand="lg">
@@ -28,10 +30,10 @@ const Header = ({ cards }) => {
                     className="mr-3 text-success"
                 >
                  {  cards.filter(card => !card.securedCard).map(card => (
-                      <LinkContainer key={card.id} to={{
-                        pathname: `/card/${card.id}`,
-                        data: card
-                    }}>
+                      <LinkContainer key={card.id} 
+                        to={`/card/${card.id}`} 
+                        state={{creditCard: card}}
+                        >
                       <NavDropdown.Item id="dropdown--container"  className="text-success dropdown--link">
                           { card.name }
                       </NavDropdown.Item>
@@ -40,7 +42,7 @@ const Header = ({ cards }) => {
                  }
                 </NavDropdown>
 
-                <NavDropdown title={
+                {/* <NavDropdown title={
                     <span className="text-success my-auto">
                         Secured Cards
                     </span>
@@ -65,7 +67,7 @@ const Header = ({ cards }) => {
                    </LinkContainer>
                     ))
                  }
-                </NavDropdown>
+                </NavDropdown> */}
                 </Nav>
                 <Nav className="ml-5" />
             </Navbar.Collapse>
