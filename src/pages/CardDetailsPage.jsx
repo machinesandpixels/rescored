@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-const CardPage = () => {
+const CardDetailsPage = () => {
     
     const location = useLocation();
     const { creditCard } = location.state;
@@ -38,10 +38,9 @@ const CardPage = () => {
             </Row>
             </Container> 
             </div> : ''
-            // <Redirect to='/'  /> 
             }
         </div>
     )
 }
 
-export default CardPage;
+export default CardDetailsPage;

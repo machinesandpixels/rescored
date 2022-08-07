@@ -7,10 +7,11 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-const Cards = () => {
+const CardIndexPage = () => {
+
     const location = useLocation();
     const { creditCards } = location.state;
-  
+   
     return (
         <div>
             <BackButton />
@@ -31,8 +32,8 @@ const Cards = () => {
                      </Button>
                      </Card.Body>
                      </Card>
-                )) : ''
-                // <Redirect to='/'  /> 
+                )) : 
+                    ''
                 }
                 </Col>
             </Row>
@@ -41,4 +42,4 @@ const Cards = () => {
     )
 }
 
-export default Cards;
+export default CardIndexPage;
