@@ -2,7 +2,8 @@ import React from 'react';
 import { 
   BrowserRouter as Router, 
   Route,
-  Routes
+  Routes,
+  Navigate
 } from 'react-router-dom';
 import { CreditCardsProvider } from '../context/CreditCardsContext';
 import Header from '../layout/Header';
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/' element={ <HomePage /> }/>
           <Route path="/cards" element={ <CardIndexPage /> } />
           <Route path="/card/:id" element={ <CardDetailsPage /> } />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
       </CreditCardsProvider>
