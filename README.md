@@ -7,7 +7,7 @@ Libraries: React Bootstrap
 Rescored is a Web Application allowing users to search for the best credit / secured credit cards to rebuild their credit scores.
 
 # HomePage Component
-![homePage](/public/assets/homePage.gif)
+![homepage](/public/assets/home-page.gif)
 
 ---
 
@@ -22,7 +22,7 @@ Rescored is a Web Application allowing users to search for the best credit / sec
 3. Three buttons: Fair Credit, Bad Credit, Limited Credit
 
 # CardIndexPage Component
-![cardIndexPage](/public/assets/cardIndexPage.jpg)
+![cardindex](/public/assets/card-index-page.jpg)
 
 ## Use Cases for CardIndexPage 
 
