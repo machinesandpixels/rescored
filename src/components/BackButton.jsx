@@ -1,14 +1,21 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const BackButton = () => {
+
+    const navigate = useNavigate();
+    const returnToHomePage = () => {
+        navigate("/", { replace: true });
+    };
+
     return (
-        <Link to="/">
-            <Button className="btn--margin" variant="outline-success">
+        <Button 
+            onClick={returnToHomePage} 
+            className="btn--margin" 
+            variant="outline-success">
                 Back 
-            </Button>
-        </Link>
+        </Button>
     )
 }
 
