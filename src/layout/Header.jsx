@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CreditCardsContext } from '../context/CreditCardsContext';
 import { LinkContainer } from 'react-router-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Header = ({ cards }) => {
+const Header = () => {
 
+    const { nonSecuredCards, securedCards } = useContext(CreditCardsContext);
+   
     return (
             <Navbar className="hh py-5" expand="lg">
                 <LinkContainer to="/">
@@ -27,11 +30,11 @@ const Header = ({ cards }) => {
                     id="collasible-nav-dropdown" 
                     className="mr-3 text-success"
                 >
-                 {  cards.filter(card => !card.securedCard).map(card => (
-                      <LinkContainer key={card.id} to={{
-                        pathname: `/card/${card.id}`,
-                        data: card
-                    }}>
+                 {  nonSecuredCards.map(card => (
+                      <LinkContainer key={card.id} 
+                        to={`/card/${card.id}`} 
+                        state={{creditCard: card}}
+                        >
                       <NavDropdown.Item id="dropdown--container"  className="text-success dropdown--link">
                           { card.name }
                       </NavDropdown.Item>
@@ -47,11 +50,11 @@ const Header = ({ cards }) => {
                     }  
                     id="collasible-nav-dropdown"
                 >
-                {  cards.filter(card => card.securedCard).map(card => (
-                      <LinkContainer key={card.id} to={{
-                        pathname: `/card/${card.id}`,
-                        data: card
-                    }}>
+                {  securedCards.map(card => (
+                    <LinkContainer key={card.id} 
+                    to={`/card/${card.id}`} 
+                    state={{creditCard: card}}
+                    >
                       <NavDropdown.Item id="dropdown--container"  className="text-success dropdown--link">
                           { 
                             card.name.includes("Merrick") || 
